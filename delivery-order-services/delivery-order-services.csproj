@@ -11,16 +11,20 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Commons\**" />
+    <Content Remove="Commons\**" />
+    <EmbeddedResource Remove="Commons\**" />
+    <None Remove="Commons\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.19.6" />
-    <PackageReference Include="MongoDB.Bson" Version="3.5.0" />
-    <PackageReference Include="MongoDB.Driver" Version="3.5.0" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
     <PackageReference Include="Confluent.Kafka" Version="2.3.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Commons\" />
-    <Folder Include="Features\" />
+    <ProjectReference Include="..\..\delivery-order-services.Domain\delivery-order-services.Domain.csproj" />
   </ItemGroup>
 
 </Project>
