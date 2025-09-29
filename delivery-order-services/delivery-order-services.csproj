@@ -27,4 +27,8 @@
     <ProjectReference Include="..\..\delivery-order-services.Domain\delivery-order-services.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Repository\Configuration\" />
+  </ItemGroup>
+
 </Project>
